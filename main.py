@@ -37,8 +37,8 @@ class LogicChecker:
 # 拓扑结构定义
 TOPOLOGY = {
     '视频 1': {'neighbors': ['视频 2', '视频 3'],
-             'constraints': {'视频 2': {'t_min': 0, 't_max': 9999},
-                             '视频 3': {'t_min': 0, 't_max': 9999}}}
+             'constraints': {'视频 2': {'t_min': -9999, 't_max': 9999},
+                             '视频 3': {'t_min': -9999, 't_max': 9999}}}
 }
 
 
@@ -76,11 +76,13 @@ class SearchWorker(QThread):
 
     def run(self):
         res = []
-        ext = OSNetFeatureExtractor()  # 使用单例 ReID 提取器
+        ext = OSNetFeatureExtractor()
         checker = LogicChecker(TOPOLOGY)
 
-        # 遍历下游摄像头节点
-        for name, vid in {'视频 2': '2.mp4', '视频 3': '3.mp4'}.items():
+        # 确保路径指向正确的资源文件夹
+        video_map = {'视频 2': 'res/2.mp4', '视频 3': 'res/3.mp4'}
+
+        for name, vid in video_map.items():
             if not os.path.exists(vid):
                 continue
 
@@ -90,9 +92,13 @@ class SearchWorker(QThread):
             # 2. 进行视觉特征比对
             tid, score, t_curr, crop = find_best_match_in_buffer(self.img, buf, ext)
 
-            if tid:
+            # --- 修改核心：增加相似度阈值过滤 ---
+            # 只有当车辆存在且视觉相似度分数（score）大于等于 0.8 时才进入后续逻辑
+            if tid and score >= 0.8:
                 # 3. 进行时空逻辑校验
                 f_score, status = checker.validate('视频 1', name, self.t_start, t_curr, score)
+
+                # 如果时空校验通过（f_score > 0），则认为匹配成功
                 if f_score > 0:
                     res.append({
                         'cam': f"{name} ({status})",
@@ -100,6 +106,10 @@ class SearchWorker(QThread):
                         'score': f_score,
                         'crop': crop
                     })
+            else:
+                # 调试用：可以打印出相似度较低而被过滤的情况
+                print(f"检测到车辆但相似度过低 ({score:.2f})，已跳过。")
+
         self.finished.emit(res)
 
 
@@ -110,7 +120,7 @@ class SearchWorker(QThread):
 class MainEntry(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("智慧城市交通管理与车辆追踪系统")
+        self.setWindowTitle("城市交通管理与车辆追踪系统")
         self.resize(1400, 900)
 
         # 页面堆栈管理器

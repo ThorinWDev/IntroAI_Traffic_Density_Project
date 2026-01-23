@@ -128,14 +128,16 @@ class TrackSystem(QWidget):
     # --- 接口 2：展示来自 2.mp4, 3.mp4 的拓扑追踪路径及截图 ---
     def show_path_results(self, results):
         """
-        展示拓扑图节点。根据《逻辑检查》报告，此处需体现物理约束校验结果 。
+        展示拓扑图节点。
         """
         # 清空等待提示
         for i in reversed(range(self.path_v_box.count())):
             self.path_v_box.itemAt(i).widget().setParent(None)
 
         if not results:
-            self.path_v_box.addWidget(QLabel(" 检索结束：未发现符合时空逻辑的匹配轨迹。"))
+            # 提示用户可能是因为阈值过高或确实没找到
+            msg = " 检索结束：未发现符合时空逻辑且相似度 > 80% 的轨迹。"
+            self.path_v_box.addWidget(QLabel(msg))
             return
 
         # 1. 绘制起始节点

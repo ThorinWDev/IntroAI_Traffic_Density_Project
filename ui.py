@@ -2,7 +2,6 @@ import sys
 import os
 import cv2
 import time
-import random
 import numpy as np
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout,
@@ -28,7 +27,7 @@ else:
     GLOBAL_DEVICE = torch.device("cpu")
 
 # ==========================================
-# 🔧 配置区域
+#  配置区域
 # ==========================================
 VIDEO_PATHS = {
     "North": "res\\north.mp4",
@@ -59,7 +58,7 @@ class YOLO_Interface:
         self.model_cars = YOLO('pts\\ordinary.pt')  # 你的车辆模型
 
         print("正在加载 YOLO 模型 (救护车检测)...")
-        # [新增] 加载第二个模型
+        # 加载第二个模型
         self.model_ambulance = YOLO('pts\\specific.pt')
 
         print("模型加载成功！")
@@ -70,18 +69,18 @@ class YOLO_Interface:
         输出: (vehicle_count, annotated_image, is_ambulance_detected)
         """
         # --- 1. 车辆检测 (用于计数) ---
-        results_cars = self.model_cars(cv_image, verbose=False)[0]
+        results_cars = self.model_cars(cv_image, verbose=False, conf=0.65)[0]
         vehicle_count = len(results_cars.boxes)
         # 使用车辆模型的绘图结果作为基础底图
         annotated_image = results_cars.plot()
 
         # --- 2. 救护车检测 (用于特权) ---
-        # [新增] 运行第二个模型
-        results_amb = self.model_ambulance(cv_image, verbose=False, conf=0.9)[0]
+        # 运行第二个模型
+        results_amb = self.model_ambulance(cv_image, verbose=False, conf=0.92)[0]
 
         is_ambulance = False
 
-        # [新增] 如果检测到救护车
+        #  如果检测到救护车
         if len(results_amb.boxes) > 0:
             is_ambulance = True
             # 这里我们不调用 plot() 画框，而是手动添加强烈的视觉提示
@@ -149,7 +148,7 @@ class TrafficAlgorithm:
 # ==========================================
 
 class VideoProcessor(QThread):
-    # [修改] 信号增加了一个 bool 参数：is_ambulance
+    #  信号增加了一个 bool 参数：is_ambulance
     frame_processed = pyqtSignal(str, QImage, int, bool)
 
     def __init__(self, direction, video_path):
