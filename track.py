@@ -43,7 +43,7 @@ class TrackSystem(QWidget):
         container_sel = QWidget()
         container_sel.setLayout(self.pool_grid)
         scroll_sel.setWidget(container_sel)
-        sel_layout.addWidget(QLabel("【步骤1】请从 视频 1 中选择要追踪的目标车辆："))
+        sel_layout.addWidget(QLabel("【步骤1】请从 A地监控视频 中选择要追踪的目标车辆："))
         sel_layout.addWidget(scroll_sel)
         self.sub_stack.addWidget(self.page_selection)
 
@@ -92,7 +92,7 @@ class TrackSystem(QWidget):
             self.pool_grid.itemAt(i).widget().setParent(None)
 
         if not buffer:
-            self.pool_grid.addWidget(QLabel(" 视频 1 中未发现有效车辆轨迹"), 0, 0)
+            self.pool_grid.addWidget(QLabel(" A地监控视频 中未发现有效车辆轨迹"), 0, 0)
             return
 
         for i, (tid, data) in enumerate(buffer.items()):
@@ -123,7 +123,7 @@ class TrackSystem(QWidget):
         # 初始化路径页显示
         for i in reversed(range(self.path_v_box.count())):
             self.path_v_box.itemAt(i).widget().setParent(None)
-        self.path_v_box.addWidget(QLabel(f" 正在从视频 2 和 视频 3 中检索目标车 (ID: {tid})..."))
+        self.path_v_box.addWidget(QLabel(f" 正在从 B、C地监控视频 中检索目标车 (ID: {tid})..."))
 
     # --- 接口 2：展示来自 2.mp4, 3.mp4 的拓扑追踪路径及截图 ---
     def show_path_results(self, results):
@@ -139,7 +139,7 @@ class TrackSystem(QWidget):
             return
 
         # 1. 绘制起始节点
-        start_node = QLabel(" 起点节点：视频 1 (原始抓拍)")
+        start_node = QLabel(" 起点节点：A地监控视频 (原始抓拍)")
         start_node.setStyleSheet("color: #00FFCC; font-weight: bold;")
         self.path_v_box.addWidget(start_node)
 
