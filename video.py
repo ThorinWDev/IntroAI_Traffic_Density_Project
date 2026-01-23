@@ -20,10 +20,10 @@ def extract_vehicle_data_pipeline(model_path, video_path, max_frames=1):
     frame_idx = 0
 
     if not cap.isOpened():
-        print(f"❌ 无法读取视频: {video_path}")
+        print(f"无法读取视频: {video_path}")
         return {}
 
-    print(f"🚀 开始全量处理视频: {video_path}")
+    print(f"开始全量处理视频: {video_path}")
 
     while cap.isOpened():
         success, frame = cap.read()
@@ -56,7 +56,7 @@ def extract_vehicle_data_pipeline(model_path, video_path, max_frames=1):
                         data['timestamps'] = [frame_idx]
 
     cap.release()
-    print(f"✅ 处理完成！捕获车辆总数 (独立 ID): {len(reid_buffer)}")
+    print(f"处理完成！捕获车辆总数 (独立 ID): {len(reid_buffer)}")
     return reid_buffer
 
 

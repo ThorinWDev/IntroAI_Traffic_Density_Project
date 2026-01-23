@@ -75,7 +75,7 @@ class TrackSystem(QWidget):
             q_img = QImage(img.tobytes(), w, h, bytesPerLine, QImage.Format_RGB888).rgbSwapped()
             return QPixmap.fromImage(q_img)
         except Exception as e:
-            print(f"❌ 图片转换出错: {e}")
+            print(f" 图片转换出错: {e}")
             return QPixmap()
 
     def handle_back_logic(self):
@@ -92,7 +92,7 @@ class TrackSystem(QWidget):
             self.pool_grid.itemAt(i).widget().setParent(None)
 
         if not buffer:
-            self.pool_grid.addWidget(QLabel("⚠️ 视频 1 中未发现有效车辆轨迹"), 0, 0)
+            self.pool_grid.addWidget(QLabel(" 视频 1 中未发现有效车辆轨迹"), 0, 0)
             return
 
         for i, (tid, data) in enumerate(buffer.items()):
@@ -123,7 +123,7 @@ class TrackSystem(QWidget):
         # 初始化路径页显示
         for i in reversed(range(self.path_v_box.count())):
             self.path_v_box.itemAt(i).widget().setParent(None)
-        self.path_v_box.addWidget(QLabel(f"🔍 正在从视频 2 和 视频 3 中检索目标车 (ID: {tid})..."))
+        self.path_v_box.addWidget(QLabel(f" 正在从视频 2 和 视频 3 中检索目标车 (ID: {tid})..."))
 
     # --- 接口 2：展示来自 2.mp4, 3.mp4 的拓扑追踪路径及截图 ---
     def show_path_results(self, results):
@@ -135,11 +135,11 @@ class TrackSystem(QWidget):
             self.path_v_box.itemAt(i).widget().setParent(None)
 
         if not results:
-            self.path_v_box.addWidget(QLabel("❌ 检索结束：未发现符合时空逻辑的匹配轨迹。"))
+            self.path_v_box.addWidget(QLabel(" 检索结束：未发现符合时空逻辑的匹配轨迹。"))
             return
 
         # 1. 绘制起始节点
-        start_node = QLabel("🏁 起点节点：视频 1 (原始抓拍)")
+        start_node = QLabel(" 起点节点：视频 1 (原始抓拍)")
         start_node.setStyleSheet("color: #00FFCC; font-weight: bold;")
         self.path_v_box.addWidget(start_node)
 
@@ -158,9 +158,9 @@ class TrackSystem(QWidget):
 
             # 左侧：文字信息（体现逻辑修正后的得分 [cite: 87]）
             info = QVBoxLayout()
-            info.addWidget(QLabel(f"🎥 位置：{res['cam']}"))
-            info.addWidget(QLabel(f"🕒 时间点：{res['time']}"))
-            info.addWidget(QLabel(f"📈 最终评分：{res['score']:.2f}"))
+            info.addWidget(QLabel(f" 位置：{res['cam']}"))
+            info.addWidget(QLabel(f" 时间点：{res['time']}"))
+            info.addWidget(QLabel(f" 最终评分：{res['score']:.2f}"))
             row.addLayout(info)
 
             # 右侧：展示从该视频中扣出来的匹配车辆截图 [cite: 76]

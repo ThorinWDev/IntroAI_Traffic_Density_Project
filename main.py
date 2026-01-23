@@ -61,7 +61,7 @@ class ExtractWorker(QThread):
             buffer = extract_vehicle_data_pipeline(self.model_path, self.video_path)
             self.extracted_signal.emit(buffer)
         else:
-            print(f"⚠️ 未找到视频文件: {self.video_path}")
+            print(f"未找到视频文件: {self.video_path}")
             self.extracted_signal.emit({})
 
 

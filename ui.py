@@ -31,10 +31,10 @@ else:
 # 🔧 配置区域
 # ==========================================
 VIDEO_PATHS = {
-    "North": "north.mp4",
-    "South": "south.mp4",
-    "West": "west.mp4",
-    "East": "east.mp4"
+    "North": "res\\north.mp4",
+    "South": "res\\south.mp4",
+    "West": "res\\west.mp4",
+    "East": "res\\east.mp4"
 }
 
 # 交通参数配置
@@ -44,7 +44,7 @@ Congestion_THRESHOLD = 15
 
 
 # ==========================================
-# 🧠 第一部分：模型与算法接口 (核心大脑)
+#  第一部分：模型与算法接口 (核心大脑)
 # ==========================================
 
 class YOLO_Interface:
@@ -56,11 +56,11 @@ class YOLO_Interface:
         self.device = GLOBAL_DEVICE
 
         print("正在加载 YOLO 模型 (车辆检测)...")
-        self.model_cars = YOLO('ordinary.pt')  # 你的车辆模型
+        self.model_cars = YOLO('pts\\ordinary.pt')  # 你的车辆模型
 
         print("正在加载 YOLO 模型 (救护车检测)...")
         # [新增] 加载第二个模型
-        self.model_ambulance = YOLO('specific.pt')
+        self.model_ambulance = YOLO('pts\\specific.pt')
 
         print("模型加载成功！")
 
@@ -101,7 +101,7 @@ class YOLO_Interface:
 
 
 # ==========================================
-# 🧠 算法核心部分
+#  算法核心部分
 # ==========================================
 
 class TrafficAlgorithm:
@@ -145,7 +145,7 @@ class TrafficAlgorithm:
 
 
 # ==========================================
-# 🧵 第二部分：多线程处理
+#  第二部分：多线程处理
 # ==========================================
 
 class VideoProcessor(QThread):
@@ -190,7 +190,7 @@ class VideoProcessor(QThread):
 
 
 # ==========================================
-# 🎨 第三部分：自定义 UI 组件 (保持不变)
+#  第三部分：自定义 UI 组件 (保持不变)
 # ==========================================
 # ... (RealTrafficLight, IntersectionMap, TrafficWaveform 保持原样，无需修改) ...
 
@@ -312,7 +312,7 @@ class TrafficWaveform(pg.PlotWidget):
 
 
 # ==========================================
-# 🚀 第四部分：主控制台 (逻辑更新)
+#  第四部分：主控制台 (逻辑更新)
 # ==========================================
 
 class SmartTrafficCenter(QWidget):
@@ -454,7 +454,7 @@ class SmartTrafficCenter(QWidget):
 
         # UI 文本显示
         if is_amb:
-            status_text = "🚑 AMBULANCE 🚑"
+            status_text = " AMBULANCE "
             color = "#FF0000"  # 亮红
             self.video_labels[direction].setStyleSheet("border: 4px solid red;")
         else:
@@ -463,7 +463,7 @@ class SmartTrafficCenter(QWidget):
             self.video_labels[direction].setStyleSheet("border: 2px solid #555;")
 
         self.video_labels[direction].info_ref.setText(
-            f"📍 {direction} | <span style='color:{color}; font-weight:bold;'>{status_text}</span>"
+            f" {direction} | <span style='color:{color}; font-weight:bold;'>{status_text}</span>"
         )
 
     def run_scheduler_logic(self):
@@ -474,7 +474,7 @@ class SmartTrafficCenter(QWidget):
         self.timer_label.setText(f"相位时长: {elapsed:.1f} s")
 
         # ======================================
-        # 🚨 紧急优先逻辑 (Override Logic)
+        #  紧急优先逻辑 (Override Logic)
         # ======================================
         emergency_direction = None
         for direction, is_here in self.ambulance_status.items():
@@ -502,7 +502,7 @@ class SmartTrafficCenter(QWidget):
                     self.deactivate_emergency_mode()
 
         # ======================================
-        # 🟢 普通调度逻辑 (原有代码)
+        #  普通调度逻辑 (原有代码)
         # ======================================
         ns_pressure = self.vehicle_counts['North'] + self.vehicle_counts['South']
         ew_pressure = self.vehicle_counts['West'] + self.vehicle_counts['East']
@@ -517,7 +517,7 @@ class SmartTrafficCenter(QWidget):
         if action == 'SWITCH':
             self.switch_phase()
 
-    # [新增] 激活紧急模式
+    #  激活紧急模式
     def activate_emergency_mode(self, direction):
         if not self.is_emergency_mode:
             self.is_emergency_mode = True
@@ -540,7 +540,7 @@ class SmartTrafficCenter(QWidget):
             self.status_label.setStyleSheet("color: red; font-weight: bold; font-size: 18px;")
             self.log_label.setText(f"⚠️ 触发紧急覆盖逻辑\n检测到救护车在 {direction}\n路口已切换至全红封锁状态！")
 
-    # [新增] 解除紧急模式
+    #  解除紧急模式
     def deactivate_emergency_mode(self):
         self.is_emergency_mode = False
         self.flash_timer.stop()
@@ -563,7 +563,7 @@ class SmartTrafficCenter(QWidget):
         self.status_label.setText(f"当前状态: {self.current_state}")
         self.status_label.setStyleSheet(f"color: {color}; font-weight: normal; font-size: 14px;")
 
-    # [新增] 界面红黑交替闪烁效果
+    #  界面红黑交替闪烁效果
     def toggle_flash_effect(self):
         self.flash_state = not self.flash_state
         if self.flash_state:

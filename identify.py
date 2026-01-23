@@ -10,16 +10,16 @@ def extract_vehicle_data_pipeline(model_path, video_path, max_frames=1):
     """
 
     # --- 1. 初始化 ---
-    print(f"🔄 正在加载模型: {model_path}")
+    print(f" 正在加载模型: {model_path}")
     try:
         model = YOLO(model_path)
     except Exception as e:
-        print(f"❌ 模型加载失败: {e}")
+        print(f" 模型加载失败: {e}")
         return {}
 
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
-        print(f"❌ 视频打不开: {video_path}")
+        print(f" 视频打不开: {video_path}")
         return {}
 
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -28,7 +28,7 @@ def extract_vehicle_data_pipeline(model_path, video_path, max_frames=1):
     # 使用字典存储追踪到的车辆数据
     reid_buffer = defaultdict(lambda: {'images': [], 'scores': [], 'timestamps': []})
     frame_idx = 0
-    print("🚀 正在后台处理视频，请稍候...")
+    print(" 正在后台处理视频，请稍候...")
 
     # --- 2. 主循环 (后台处理) ---
     while cap.isOpened():
@@ -81,5 +81,5 @@ def extract_vehicle_data_pipeline(model_path, video_path, max_frames=1):
     cap.release()
     cv2.destroyAllWindows()
 
-    print(f"✅ 处理完成！总计捕获独立 ID 数量: {len(reid_buffer)}")
+    print(f" 处理完成！总计捕获独立 ID 数量: {len(reid_buffer)}")
     return reid_buffer
