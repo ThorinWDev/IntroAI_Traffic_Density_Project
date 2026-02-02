@@ -1,0 +1,21 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+    <vType id="my_car" accel="2.6" decel="4.5" length="5" maxSpeed="27.78" color="yellow"/>
+
+    <flow id="f_main" 
+          type="my_car" 
+          begin="0" 
+          end="3600" 
+          from="1221045393" 
+          to="1221045395" 
+          vehsPerHour="800" 
+          departLane="best" 
+          departSpeed="max"/>
+
+    <route id="r_city" edges="1221045394#0 1221045394#1 1221045394#2"/>
+    <flow id="f_city" 
+          type="my_car" 
+          route="r_city" 
+          begin="0" 
+          end="3600" 
+          probability="0.1"/> </routes>
