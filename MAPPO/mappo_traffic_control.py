@@ -97,16 +97,15 @@ class MAPPOAgent:
     def clear_memory(self):
         """清空记忆"""
         self.memory = []
-    
+
     def update(self, global_states):
         """更新策略"""
         if len(self.memory) == 0:
             return 0.0, 0.0
-        
-        # 转换为张量
-        states = torch.FloatTensor([m[0] for m in self.memory]).to(self.device)
-        actions = torch.LongTensor([m[1] for m in self.memory]).to(self.device)
-        old_logprobs = torch.FloatTensor([m[2] for m in self.memory]).to(self.device)
+
+        states = torch.FloatTensor(np.array([m[0] for m in self.memory])).to(self.device)
+        actions = torch.LongTensor(np.array([m[1] for m in self.memory])).to(self.device)
+        old_logprobs = torch.FloatTensor(np.array([m[2] for m in self.memory])).to(self.device)
         rewards = [m[3] for m in self.memory]
         dones = [m[4] for m in self.memory]
         
@@ -141,7 +140,7 @@ class MAPPOAgent:
             
             # 优势函数
             advantages = returns - state_values.detach()
-            
+
             # 重要性采样比
             ratios = torch.exp(new_logprobs - old_logprobs)
             
@@ -158,19 +157,21 @@ class MAPPOAgent:
             actor_loss.backward()
             torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 0.5)
             self.actor_optimizer.step()
-            
-            # 更新评论家
+
             self.critic_optimizer.zero_grad()
             critic_loss.backward()
             torch.nn.utils.clip_grad_norm_(self.critic.parameters(), 0.5)
             self.critic_optimizer.step()
-            
+
             actor_losses.append(actor_loss.item())
             critic_losses.append(critic_loss.item())
-        
+
+        # 更新完成后清空 memory
+        self.memory.clear()
+
         # 更新旧策略
         self.actor_old.load_state_dict(self.actor.state_dict())
-        
+
         return np.mean(actor_losses), np.mean(critic_losses)
 
 
