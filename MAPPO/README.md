@@ -6,21 +6,16 @@
 ## 环境要求
 
 ### 1. 安装SUMO
-访问下载页面：前往 SUMO 官方下载页。
+- 访问下载页面：前往 [SUMO 官方下载页](https://sumo.dlr.de/docs/Downloads.php)。
 
-下载 MSI 安装包：在 Windows 部分，点击下载 sumo-win64-x.x.x.msi（x.x.x 为版本号）。
+- 下载 MSI 安装包：在 Windows 部分，点击下载 sumo-win64-x.x.x.msi（x.x.x 为版本号）。
 
 提示：如果你需要额外的开发功能，可以选择带 extra 后缀的版本。
 
-运行安装程序：双击下载的 .msi 文件，按照提示点击 "Next" 完成安装。
+- 运行安装程序：双击下载的 .msi 文件，按照提示点击 "Next" 完成安装。
 
-自动配置：安装程序会自动将 SUMO 添加到系统路径中，并设置 SUMO_HOME 环境变量（这是运行 SUMO 脚本的关键）。
-```bash
-# Ubuntu/Linux
-sudo apt-get install sumo sumo-tools sumo-doc
+- 自动配置：安装程序会自动将 SUMO 添加到系统路径中，并设置 SUMO_HOME 环境变量（这是运行 SUMO 脚本的关键）。
 
-# 或从源码安装：https://sumo.dlr.de/docs/Installing/index.html
-```
 
 ### 2. 设置环境变量
 ```bash
