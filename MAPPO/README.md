@@ -6,6 +6,15 @@
 ## 环境要求
 
 ### 1. 安装SUMO
+访问下载页面：前往 SUMO 官方下载页。
+
+下载 MSI 安装包：在 Windows 部分，点击下载 sumo-win64-x.x.x.msi（x.x.x 为版本号）。
+
+提示：如果你需要额外的开发功能，可以选择带 extra 后缀的版本。
+
+运行安装程序：双击下载的 .msi 文件，按照提示点击 "Next" 完成安装。
+
+自动配置：安装程序会自动将 SUMO 添加到系统路径中，并设置 SUMO_HOME 环境变量（这是运行 SUMO 脚本的关键）。
 ```bash
 # Ubuntu/Linux
 sudo apt-get install sumo sumo-tools sumo-doc
@@ -101,9 +110,9 @@ netgenerate --grid --grid.number=3 --grid.length=200 \
 
 ### 5. 奖励函数
 ```python
-reward = -总等待时间 / 100.0
+reward = -总等待罚时 / 100.0
 ```
-目标是最小化所有车辆的总等待时间。
+目标是最小化所有车辆的总等待罚时，若一辆车等待了5秒，罚时为1+2+3+4+5=15秒。
 
 ## 使用方法
 
