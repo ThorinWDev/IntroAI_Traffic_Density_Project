@@ -1,0 +1,471 @@
+D:\anaconda3\envs\ai_gpu\python.exe D:\ProgramFiles\traffic_program\MAPPO\mappo_traffic_control.py 
+trained with GPU
+创建了 5 个MAPPO智能体
+状态维度: 5, 动作维度: 4, 全局状态维度: 25
+
+开始训练！
+  1%|          | 10/1000 [05:33<9:01:14, 32.80s/it]Episode 10/1000, Avg Reward (last 10): -583561.46
+  2%|▏         | 19/1000 [10:26<8:54:51, 32.71s/it]
+更新智能体 (Episode 20)...
+  J11: Actor Loss=0.7506, Critic Loss=52.9236
+  J3: Actor Loss=0.6294, Critic Loss=35.7545
+  J4: Actor Loss=1.0921, Critic Loss=100.6820
+  J6: Actor Loss=1.2787, Critic Loss=104.6345
+  J8: Actor Loss=0.1422, Critic Loss=31.1343
+Episode 20/1000, Avg Reward (last 10): -592363.30
+  3%|▎         | 30/1000 [16:22<8:46:12, 32.55s/it]Episode 30/1000, Avg Reward (last 10): -734254.00
+  4%|▍         | 39/1000 [21:11<8:35:45, 32.20s/it]
+更新智能体 (Episode 40)...
+  J11: Actor Loss=-0.0339, Critic Loss=10.9197
+  J3: Actor Loss=0.5356, Critic Loss=8.5478
+  J4: Actor Loss=-0.1129, Critic Loss=10.5977
+  J6: Actor Loss=-0.6960, Critic Loss=11.5102
+  4%|▍         | 40/1000 [21:43<8:36:25, 32.28s/it]  J8: Actor Loss=0.2247, Critic Loss=8.2468
+Episode 40/1000, Avg Reward (last 10): -740487.06
+  5%|▌         | 50/1000 [26:54<8:09:05, 30.89s/it]Episode 50/1000, Avg Reward (last 10): -692949.76
+  6%|▌         | 59/1000 [31:40<8:12:55, 31.43s/it]
+更新智能体 (Episode 60)...
+  J11: Actor Loss=-0.1218, Critic Loss=3.8126
+  J3: Actor Loss=-0.4710, Critic Loss=5.1055
+  J4: Actor Loss=-0.9131, Critic Loss=16.2286
+  J6: Actor Loss=0.1318, Critic Loss=7.4980
+  J8: Actor Loss=0.1744, Critic Loss=5.1305
+Episode 60/1000, Avg Reward (last 10): -716403.17
+  7%|▋         | 70/1000 [37:24<8:06:37, 31.40s/it]Episode 70/1000, Avg Reward (last 10): -630157.08
+  8%|▊         | 79/1000 [42:00<7:48:02, 30.49s/it]
+更新智能体 (Episode 80)...
+  J11: Actor Loss=-0.0269, Critic Loss=1.7507
+  J3: Actor Loss=0.0493, Critic Loss=2.8021
+  J4: Actor Loss=-0.2329, Critic Loss=9.1116
+  J6: Actor Loss=0.1136, Critic Loss=2.0050
+  J8: Actor Loss=-0.2889, Critic Loss=3.3873
+Episode 80/1000, Avg Reward (last 10): -694511.04
+  9%|▉         | 90/1000 [47:37<7:37:09, 30.14s/it]Episode 90/1000, Avg Reward (last 10): -757948.11
+ 10%|▉         | 99/1000 [52:17<7:47:06, 31.11s/it]
+更新智能体 (Episode 100)...
+  J11: Actor Loss=-0.0060, Critic Loss=2.1795
+  J3: Actor Loss=0.3560, Critic Loss=4.6475
+  J4: Actor Loss=0.0747, Critic Loss=2.9283
+  J6: Actor Loss=-0.3868, Critic Loss=2.1788
+  J8: Actor Loss=0.3069, Critic Loss=3.0723
+Episode 100/1000, Avg Reward (last 10): -528692.77
+ 10%|█         | 100/1000 [52:49<7:49:54, 31.33s/it]模型已保存到 models/mappo_episode_100
+ 11%|█         | 110/1000 [57:58<7:37:47, 30.86s/it]Episode 110/1000, Avg Reward (last 10): -583961.52
+ 12%|█▏        | 119/1000 [2:03:44<52:57:22, 216.39s/it]
+更新智能体 (Episode 120)...
+  J11: Actor Loss=-0.1384, Critic Loss=2.1936
+  J3: Actor Loss=-0.3910, Critic Loss=5.4550
+  J4: Actor Loss=-0.0907, Critic Loss=1.6567
+  J6: Actor Loss=0.0620, Critic Loss=1.8576
+  J8: Actor Loss=-0.2830, Critic Loss=3.1361
+Episode 120/1000, Avg Reward (last 10): -590867.76
+ 13%|█▎        | 130/1000 [2:09:27<8:21:53, 34.61s/it]Episode 130/1000, Avg Reward (last 10): -684392.76
+ 14%|█▍        | 139/1000 [2:14:07<7:15:31, 30.35s/it]
+更新智能体 (Episode 140)...
+  J11: Actor Loss=0.3121, Critic Loss=3.0494
+  J3: Actor Loss=0.0493, Critic Loss=3.5667
+  J4: Actor Loss=0.2758, Critic Loss=2.6284
+  J6: Actor Loss=0.0895, Critic Loss=3.2346
+  J8: Actor Loss=0.3443, Critic Loss=6.2416
+Episode 140/1000, Avg Reward (last 10): -675659.97
+ 15%|█▌        | 150/1000 [2:19:47<7:22:38, 31.25s/it]Episode 150/1000, Avg Reward (last 10): -603883.23
+ 16%|█▌        | 159/1000 [2:24:29<7:11:14, 30.77s/it]
+更新智能体 (Episode 160)...
+  J11: Actor Loss=0.1520, Critic Loss=1.5630
+  J3: Actor Loss=-0.0396, Critic Loss=2.5125
+  J4: Actor Loss=-0.0142, Critic Loss=1.3229
+  J6: Actor Loss=-0.1129, Critic Loss=3.2008
+ 16%|█▌        | 160/1000 [2:25:02<7:19:19, 31.38s/it]  J8: Actor Loss=-0.3668, Critic Loss=3.7868
+Episode 160/1000, Avg Reward (last 10): -530858.52
+ 17%|█▋        | 170/1000 [2:30:13<7:21:18, 31.90s/it]Episode 170/1000, Avg Reward (last 10): -646436.39
+ 18%|█▊        | 179/1000 [2:35:13<7:36:15, 33.34s/it]
+更新智能体 (Episode 180)...
+  J11: Actor Loss=0.0519, Critic Loss=6.5114
+  J3: Actor Loss=0.1433, Critic Loss=2.9144
+  J4: Actor Loss=0.0176, Critic Loss=1.3437
+  J6: Actor Loss=0.2145, Critic Loss=5.4464
+ 18%|█▊        | 180/1000 [2:35:48<7:42:03, 33.81s/it]  J8: Actor Loss=0.0091, Critic Loss=3.5826
+Episode 180/1000, Avg Reward (last 10): -615428.21
+ 19%|█▉        | 190/1000 [2:49:03<23:39:06, 105.12s/it]Episode 190/1000, Avg Reward (last 10): -542876.46
+ 20%|█▉        | 199/1000 [3:04:55<23:06:37, 103.87s/it]
+更新智能体 (Episode 200)...
+  J11: Actor Loss=-0.0816, Critic Loss=2.6661
+  J3: Actor Loss=-0.0417, Critic Loss=1.2458
+  J4: Actor Loss=-0.0691, Critic Loss=1.2167
+  J6: Actor Loss=0.1556, Critic Loss=3.3269
+  J8: Actor Loss=0.1080, Critic Loss=2.1186
+Episode 200/1000, Avg Reward (last 10): -569667.87
+模型已保存到 models/mappo_episode_200
+ 21%|██        | 210/1000 [3:27:33<13:35:37, 61.95s/it]Episode 210/1000, Avg Reward (last 10): -576969.70
+ 22%|██▏       | 219/1000 [3:32:22<7:13:03, 33.27s/it]
+更新智能体 (Episode 220)...
+  J11: Actor Loss=0.0639, Critic Loss=1.1148
+  J3: Actor Loss=0.0586, Critic Loss=1.3877
+  J4: Actor Loss=-0.1151, Critic Loss=1.2873
+  J6: Actor Loss=0.0458, Critic Loss=1.5837
+  J8: Actor Loss=0.0247, Critic Loss=1.8318
+Episode 220/1000, Avg Reward (last 10): -531818.27
+ 23%|██▎       | 230/1000 [3:38:06<6:39:57, 31.17s/it]Episode 230/1000, Avg Reward (last 10): -536546.34
+ 24%|██▍       | 239/1000 [3:42:43<6:29:20, 30.70s/it]
+更新智能体 (Episode 240)...
+  J11: Actor Loss=-0.0074, Critic Loss=1.2232
+  J3: Actor Loss=-0.0745, Critic Loss=1.2699
+  J4: Actor Loss=0.0228, Critic Loss=1.2673
+  J6: Actor Loss=-0.1064, Critic Loss=1.1814
+  J8: Actor Loss=0.2910, Critic Loss=2.5456
+Episode 240/1000, Avg Reward (last 10): -621824.37
+ 25%|██▌       | 250/1000 [3:48:26<6:26:35, 30.93s/it]Episode 250/1000, Avg Reward (last 10): -456656.05
+ 26%|██▌       | 259/1000 [3:53:03<6:24:41, 31.15s/it]
+更新智能体 (Episode 260)...
+  J11: Actor Loss=0.0065, Critic Loss=1.0799
+  J3: Actor Loss=-0.0314, Critic Loss=1.1940
+  J4: Actor Loss=0.0204, Critic Loss=1.2330
+  J6: Actor Loss=0.0397, Critic Loss=1.2075
+ 26%|██▌       | 260/1000 [3:53:36<6:28:04, 31.47s/it]  J8: Actor Loss=-0.3195, Critic Loss=3.0305
+Episode 260/1000, Avg Reward (last 10): -634251.66
+ 27%|██▋       | 270/1000 [4:14:33<13:01:54, 64.27s/it]Episode 270/1000, Avg Reward (last 10): -593501.45
+ 28%|██▊       | 279/1000 [4:19:11<6:32:10, 32.64s/it]
+更新智能体 (Episode 280)...
+  J11: Actor Loss=-0.0617, Critic Loss=1.9003
+  J3: Actor Loss=-0.2667, Critic Loss=1.3029
+  J4: Actor Loss=-0.1452, Critic Loss=4.0330
+  J6: Actor Loss=-0.1048, Critic Loss=1.2349
+ 28%|██▊       | 280/1000 [4:19:43<6:26:44, 32.23s/it]  J8: Actor Loss=0.3306, Critic Loss=3.2267
+Episode 280/1000, Avg Reward (last 10): -641546.22
+ 29%|██▉       | 290/1000 [4:24:48<6:00:33, 30.47s/it]Episode 290/1000, Avg Reward (last 10): -573743.74
+ 30%|██▉       | 299/1000 [4:29:31<6:08:31, 31.54s/it]
+更新智能体 (Episode 300)...
+  J11: Actor Loss=-0.0086, Critic Loss=1.5974
+  J3: Actor Loss=-0.0918, Critic Loss=0.9629
+  J4: Actor Loss=0.0927, Critic Loss=2.2280
+  J6: Actor Loss=0.0680, Critic Loss=1.0821
+  J8: Actor Loss=-0.1704, Critic Loss=1.5661
+Episode 300/1000, Avg Reward (last 10): -443504.69
+模型已保存到 models/mappo_episode_300
+ 31%|███       | 310/1000 [4:35:13<5:58:48, 31.20s/it]Episode 310/1000, Avg Reward (last 10): -584884.63
+ 32%|███▏      | 319/1000 [4:39:56<5:54:48, 31.26s/it]
+更新智能体 (Episode 320)...
+  J11: Actor Loss=0.0726, Critic Loss=2.2775
+  J3: Actor Loss=-0.0089, Critic Loss=1.0772
+  J4: Actor Loss=-0.0307, Critic Loss=1.4968
+  J6: Actor Loss=-0.0521, Critic Loss=1.0581
+ 32%|███▏      | 320/1000 [4:40:28<5:55:44, 31.39s/it]  J8: Actor Loss=0.1555, Critic Loss=2.1880
+Episode 320/1000, Avg Reward (last 10): -481378.20
+ 33%|███▎      | 330/1000 [4:49:41<6:59:01, 37.52s/it]Episode 330/1000, Avg Reward (last 10): -537277.13
+ 34%|███▍      | 339/1000 [4:54:25<5:50:02, 31.77s/it]
+更新智能体 (Episode 340)...
+  J11: Actor Loss=-0.0096, Critic Loss=1.9497
+  J3: Actor Loss=0.0752, Critic Loss=1.8962
+  J4: Actor Loss=-0.0817, Critic Loss=1.2487
+  J6: Actor Loss=0.3938, Critic Loss=2.2294
+ 34%|███▍      | 340/1000 [4:54:56<5:45:38, 31.42s/it]  J8: Actor Loss=-0.0628, Critic Loss=2.7232
+Episode 340/1000, Avg Reward (last 10): -455372.68
+ 35%|███▌      | 350/1000 [5:00:07<5:34:37, 30.89s/it]Episode 350/1000, Avg Reward (last 10): -385080.66
+ 36%|███▌      | 359/1000 [5:04:53<5:43:03, 32.11s/it]
+更新智能体 (Episode 360)...
+  J11: Actor Loss=-0.1399, Critic Loss=1.2049
+  J3: Actor Loss=-0.2644, Critic Loss=2.1766
+  J4: Actor Loss=-0.0968, Critic Loss=0.9938
+  J6: Actor Loss=-0.0545, Critic Loss=1.2808
+  J8: Actor Loss=-0.0193, Critic Loss=1.4682
+Episode 360/1000, Avg Reward (last 10): -463060.30
+ 37%|███▋      | 370/1000 [5:10:40<5:30:16, 31.45s/it]Episode 370/1000, Avg Reward (last 10): -414023.68
+ 38%|███▊      | 379/1000 [5:15:20<5:19:41, 30.89s/it]
+更新智能体 (Episode 380)...
+  J11: Actor Loss=0.0469, Critic Loss=1.0915
+  J3: Actor Loss=0.0685, Critic Loss=1.4313
+  J4: Actor Loss=0.2582, Critic Loss=1.3565
+  J6: Actor Loss=-0.1025, Critic Loss=1.1568
+  J8: Actor Loss=0.1846, Critic Loss=1.4147
+Episode 380/1000, Avg Reward (last 10): -496843.05
+ 39%|███▉      | 390/1000 [5:21:03<5:17:25, 31.22s/it]Episode 390/1000, Avg Reward (last 10): -519085.07
+ 40%|███▉      | 399/1000 [5:25:43<5:09:39, 30.91s/it]
+更新智能体 (Episode 400)...
+  J11: Actor Loss=-0.1381, Critic Loss=2.0696
+  J3: Actor Loss=0.4351, Critic Loss=2.2360
+  J4: Actor Loss=-0.1529, Critic Loss=1.4363
+  J6: Actor Loss=0.0585, Critic Loss=1.5365
+  J8: Actor Loss=-0.2205, Critic Loss=1.8098
+Episode 400/1000, Avg Reward (last 10): -556338.15
+ 40%|████      | 400/1000 [5:26:15<5:14:42, 31.47s/it]模型已保存到 models/mappo_episode_400
+ 41%|████      | 410/1000 [5:31:28<5:06:39, 31.19s/it]Episode 410/1000, Avg Reward (last 10): -451587.97
+ 42%|████▏     | 419/1000 [5:36:07<5:00:23, 31.02s/it]
+更新智能体 (Episode 420)...
+  J11: Actor Loss=-0.1172, Critic Loss=1.1767
+  J3: Actor Loss=-0.0450, Critic Loss=1.0175
+  J4: Actor Loss=-0.1680, Critic Loss=1.3001
+  J6: Actor Loss=0.0654, Critic Loss=1.2525
+  J8: Actor Loss=0.0063, Critic Loss=0.8036
+Episode 420/1000, Avg Reward (last 10): -445084.52
+ 43%|████▎     | 430/1000 [5:41:53<5:02:09, 31.81s/it]Episode 430/1000, Avg Reward (last 10): -427629.87
+ 44%|████▍     | 439/1000 [5:46:30<4:46:54, 30.69s/it]
+更新智能体 (Episode 440)...
+  J11: Actor Loss=-0.0104, Critic Loss=1.1898
+  J3: Actor Loss=-0.0033, Critic Loss=1.0703
+  J4: Actor Loss=0.0316, Critic Loss=1.2627
+  J6: Actor Loss=-0.1308, Critic Loss=1.0071
+  J8: Actor Loss=-0.0552, Critic Loss=1.0206
+Episode 440/1000, Avg Reward (last 10): -390845.78
+ 45%|████▌     | 450/1000 [5:52:06<4:39:01, 30.44s/it]Episode 450/1000, Avg Reward (last 10): -539253.20
+ 46%|████▌     | 459/1000 [5:56:48<4:44:34, 31.56s/it]
+更新智能体 (Episode 460)...
+  J11: Actor Loss=0.1195, Critic Loss=1.9402
+  J3: Actor Loss=0.0122, Critic Loss=1.0044
+  J4: Actor Loss=-0.0920, Critic Loss=1.7740
+  J6: Actor Loss=-0.0003, Critic Loss=1.2435
+  J8: Actor Loss=-0.0459, Critic Loss=1.3199
+Episode 460/1000, Avg Reward (last 10): -422592.39
+ 47%|████▋     | 470/1000 [6:35:18<7:02:36, 47.84s/it]Episode 470/1000, Avg Reward (last 10): -455966.69
+ 48%|████▊     | 479/1000 [6:39:55<4:34:00, 31.56s/it]
+更新智能体 (Episode 480)...
+  J11: Actor Loss=-0.0535, Critic Loss=1.0870
+  J3: Actor Loss=-0.1312, Critic Loss=0.8434
+  J4: Actor Loss=-0.0996, Critic Loss=0.8163
+  J6: Actor Loss=0.0109, Critic Loss=0.8341
+  J8: Actor Loss=-0.0509, Critic Loss=0.8461
+Episode 480/1000, Avg Reward (last 10): -328581.28
+ 49%|████▉     | 490/1000 [6:45:32<4:22:11, 30.85s/it]Episode 490/1000, Avg Reward (last 10): -569284.51
+ 50%|████▉     | 499/1000 [6:50:06<4:14:37, 30.49s/it]
+更新智能体 (Episode 500)...
+  J11: Actor Loss=-0.1365, Critic Loss=4.4391
+  J3: Actor Loss=0.0111, Critic Loss=16.1359
+  J4: Actor Loss=0.0499, Critic Loss=5.9415
+  J6: Actor Loss=-0.0393, Critic Loss=5.3626
+  J8: Actor Loss=0.0993, Critic Loss=2.2256
+Episode 500/1000, Avg Reward (last 10): -425465.47
+ 50%|█████     | 500/1000 [6:50:36<4:13:07, 30.37s/it]模型已保存到 models/mappo_episode_500
+ 51%|█████     | 510/1000 [6:55:40<4:04:01, 29.88s/it]Episode 510/1000, Avg Reward (last 10): -417474.13
+ 52%|█████▏    | 519/1000 [7:00:13<4:03:39, 30.39s/it]
+更新智能体 (Episode 520)...
+  J11: Actor Loss=0.0564, Critic Loss=1.2955
+  J3: Actor Loss=0.0054, Critic Loss=1.5748
+  J4: Actor Loss=0.0857, Critic Loss=2.1222
+  J6: Actor Loss=-0.0676, Critic Loss=1.6106
+ 52%|█████▏    | 520/1000 [7:24:13<60:27:02, 453.38s/it]  J8: Actor Loss=0.0092, Critic Loss=1.2802
+Episode 520/1000, Avg Reward (last 10): -499223.85
+ 53%|█████▎    | 530/1000 [7:39:46<9:45:15, 74.71s/it] Episode 530/1000, Avg Reward (last 10): -481987.02
+ 54%|█████▍    | 539/1000 [7:55:36<14:03:44, 109.81s/it]
+更新智能体 (Episode 540)...
+  J11: Actor Loss=-0.1728, Critic Loss=1.3417
+  J3: Actor Loss=-0.1040, Critic Loss=0.8549
+  J4: Actor Loss=-0.2144, Critic Loss=1.6754
+  J6: Actor Loss=-0.1357, Critic Loss=1.2876
+  J8: Actor Loss=-0.1964, Critic Loss=1.9267
+Episode 540/1000, Avg Reward (last 10): -460382.02
+ 55%|█████▌    | 550/1000 [8:15:20<12:56:04, 103.48s/it]Episode 550/1000, Avg Reward (last 10): -492400.01
+ 56%|█████▌    | 559/1000 [8:28:40<8:20:29, 68.09s/it] 
+更新智能体 (Episode 560)...
+  J11: Actor Loss=0.0908, Critic Loss=1.3994
+  J3: Actor Loss=-0.0173, Critic Loss=1.3304
+  J4: Actor Loss=-0.0647, Critic Loss=1.1182
+  J6: Actor Loss=-0.0233, Critic Loss=1.2749
+  J8: Actor Loss=0.0027, Critic Loss=1.0443
+Episode 560/1000, Avg Reward (last 10): -409521.98
+ 57%|█████▋    | 570/1000 [8:34:20<3:49:18, 32.00s/it]Episode 570/1000, Avg Reward (last 10): -409911.47
+ 58%|█████▊    | 579/1000 [8:40:52<7:14:05, 61.87s/it]
+更新智能体 (Episode 580)...
+  J11: Actor Loss=0.0419, Critic Loss=1.2484
+  J3: Actor Loss=-0.0836, Critic Loss=0.7780
+  J4: Actor Loss=0.0047, Critic Loss=0.9614
+  J6: Actor Loss=0.0368, Critic Loss=0.9622
+ 58%|█████▊    | 580/1000 [8:42:44<8:57:55, 76.85s/it]  J8: Actor Loss=-0.0280, Critic Loss=0.9011
+Episode 580/1000, Avg Reward (last 10): -466959.14
+ 59%|█████▉    | 590/1000 [8:57:28<9:00:29, 79.10s/it] Episode 590/1000, Avg Reward (last 10): -509485.68
+ 60%|█████▉    | 599/1000 [9:02:06<3:38:08, 32.64s/it]
+更新智能体 (Episode 600)...
+  J11: Actor Loss=-0.0224, Critic Loss=1.1019
+  J3: Actor Loss=-0.0262, Critic Loss=1.2870
+  J4: Actor Loss=0.0386, Critic Loss=0.9266
+  J6: Actor Loss=-0.0155, Critic Loss=1.0745
+  J8: Actor Loss=-0.0093, Critic Loss=1.0332
+Episode 600/1000, Avg Reward (last 10): -478000.05
+模型已保存到 models/mappo_episode_600
+ 61%|██████    | 610/1000 [9:07:37<3:18:01, 30.47s/it]Episode 610/1000, Avg Reward (last 10): -500525.58
+ 62%|██████▏   | 619/1000 [9:12:07<3:10:33, 30.01s/it]
+更新智能体 (Episode 620)...
+  J11: Actor Loss=-0.0549, Critic Loss=0.7953
+  J3: Actor Loss=0.0914, Critic Loss=1.2515
+  J4: Actor Loss=0.0059, Critic Loss=0.9927
+  J6: Actor Loss=-0.2134, Critic Loss=1.4767
+  J8: Actor Loss=-0.2119, Critic Loss=1.2722
+Episode 620/1000, Avg Reward (last 10): -548816.55
+ 63%|██████▎   | 630/1000 [9:17:35<3:05:47, 30.13s/it]Episode 630/1000, Avg Reward (last 10): -573816.58
+ 64%|██████▍   | 639/1000 [9:22:06<2:59:31, 29.84s/it]
+更新智能体 (Episode 640)...
+  J11: Actor Loss=-0.0055, Critic Loss=0.8920
+  J3: Actor Loss=0.0277, Critic Loss=1.2253
+  J4: Actor Loss=0.0471, Critic Loss=1.0368
+  J6: Actor Loss=0.1272, Critic Loss=1.3283
+  J8: Actor Loss=0.0840, Critic Loss=1.1849
+Episode 640/1000, Avg Reward (last 10): -510287.01
+ 65%|██████▌   | 650/1000 [10:54:26<154:54:00, 1593.26s/it]Episode 650/1000, Avg Reward (last 10): -634457.79
+ 66%|██████▌   | 659/1000 [10:59:06<8:53:16, 93.83s/it]  
+更新智能体 (Episode 660)...
+  J11: Actor Loss=0.0242, Critic Loss=0.7577
+  J3: Actor Loss=0.0667, Critic Loss=1.9150
+  J4: Actor Loss=-0.0346, Critic Loss=0.8284
+  J6: Actor Loss=0.0164, Critic Loss=0.6708
+ 66%|██████▌   | 660/1000 [10:59:37<7:05:00, 75.00s/it]  J8: Actor Loss=0.0513, Critic Loss=1.1437
+Episode 660/1000, Avg Reward (last 10): -409181.94
+ 67%|██████▋   | 670/1000 [11:04:37<2:52:56, 31.44s/it]Episode 670/1000, Avg Reward (last 10): -569402.01
+ 68%|██████▊   | 679/1000 [11:09:08<2:42:05, 30.30s/it]
+更新智能体 (Episode 680)...
+  J11: Actor Loss=-0.0770, Critic Loss=0.6940
+  J3: Actor Loss=-0.2067, Critic Loss=1.3896
+  J4: Actor Loss=0.0041, Critic Loss=1.4575
+  J6: Actor Loss=0.0111, Critic Loss=0.6662
+ 68%|██████▊   | 680/1000 [11:09:39<2:42:13, 30.42s/it]  J8: Actor Loss=0.0296, Critic Loss=0.8585
+Episode 680/1000, Avg Reward (last 10): -442998.91
+ 69%|██████▉   | 690/1000 [11:14:38<2:36:31, 30.30s/it]Episode 690/1000, Avg Reward (last 10): -379034.78
+ 70%|██████▉   | 699/1000 [11:19:09<2:32:32, 30.41s/it]
+更新智能体 (Episode 700)...
+  J11: Actor Loss=0.0291, Critic Loss=5.2775
+  J3: Actor Loss=-0.1151, Critic Loss=5.6170
+  J4: Actor Loss=-0.0299, Critic Loss=3.4423
+  J6: Actor Loss=0.0217, Critic Loss=1.2089
+  J8: Actor Loss=-0.2086, Critic Loss=3.5124
+Episode 700/1000, Avg Reward (last 10): -515743.34
+模型已保存到 models/mappo_episode_700
+ 71%|███████   | 710/1000 [11:24:42<2:26:14, 30.26s/it]Episode 710/1000, Avg Reward (last 10): -370423.69
+ 72%|███████▏  | 719/1000 [11:29:13<2:22:21, 30.40s/it]
+更新智能体 (Episode 720)...
+  J11: Actor Loss=0.0678, Critic Loss=0.7946
+  J3: Actor Loss=0.2054, Critic Loss=1.3380
+  J4: Actor Loss=-0.0071, Critic Loss=1.4500
+  J6: Actor Loss=0.0590, Critic Loss=0.8931
+  J8: Actor Loss=0.3154, Critic Loss=3.4282
+Episode 720/1000, Avg Reward (last 10): -495613.82
+ 73%|███████▎  | 730/1000 [11:34:41<2:13:37, 29.69s/it]Episode 730/1000, Avg Reward (last 10): -473654.68
+ 74%|███████▍  | 739/1000 [11:39:11<2:10:33, 30.01s/it]
+更新智能体 (Episode 740)...
+  J11: Actor Loss=-0.0143, Critic Loss=0.9189
+  J3: Actor Loss=-0.0318, Critic Loss=0.6672
+  J4: Actor Loss=-0.0628, Critic Loss=0.7238
+  J6: Actor Loss=-0.0513, Critic Loss=1.0870
+ 74%|███████▍  | 740/1000 [11:39:41<2:10:09, 30.04s/it]  J8: Actor Loss=-0.1231, Critic Loss=1.0683
+Episode 740/1000, Avg Reward (last 10): -363590.62
+ 75%|███████▌  | 750/1000 [11:44:42<2:04:45, 29.94s/it]Episode 750/1000, Avg Reward (last 10): -335460.76
+ 76%|███████▌  | 759/1000 [11:49:12<2:00:00, 29.88s/it]
+更新智能体 (Episode 760)...
+  J11: Actor Loss=0.0112, Critic Loss=0.7554
+  J3: Actor Loss=-0.0152, Critic Loss=0.9425
+  J4: Actor Loss=-0.0657, Critic Loss=1.0545
+  J6: Actor Loss=-0.1092, Critic Loss=0.9339
+  J8: Actor Loss=-0.0072, Critic Loss=1.2060
+Episode 760/1000, Avg Reward (last 10): -548447.46
+ 77%|███████▋  | 770/1000 [11:54:42<1:53:04, 29.50s/it]Episode 770/1000, Avg Reward (last 10): -564060.37
+ 78%|███████▊  | 779/1000 [11:59:15<1:51:50, 30.36s/it]
+更新智能体 (Episode 780)...
+  J11: Actor Loss=-0.0428, Critic Loss=0.7744
+  J3: Actor Loss=-0.0161, Critic Loss=0.7080
+  J4: Actor Loss=-0.0289, Critic Loss=0.7082
+  J6: Actor Loss=-0.0572, Critic Loss=0.6942
+ 78%|███████▊  | 780/1000 [11:59:43<1:49:18, 29.81s/it]  J8: Actor Loss=-0.1040, Critic Loss=0.8084
+Episode 780/1000, Avg Reward (last 10): -376147.56
+ 79%|███████▉  | 790/1000 [12:04:38<1:42:20, 29.24s/it]Episode 790/1000, Avg Reward (last 10): -543124.95
+ 80%|███████▉  | 799/1000 [12:09:10<1:41:13, 30.22s/it]
+更新智能体 (Episode 800)...
+  J11: Actor Loss=0.0270, Critic Loss=0.9993
+  J3: Actor Loss=0.0451, Critic Loss=0.9924
+  J4: Actor Loss=0.0033, Critic Loss=0.7398
+  J6: Actor Loss=0.0209, Critic Loss=0.5316
+  J8: Actor Loss=0.0971, Critic Loss=0.6712
+Episode 800/1000, Avg Reward (last 10): -399926.37
+模型已保存到 models/mappo_episode_800
+ 81%|████████  | 810/1000 [12:14:38<1:34:54, 29.97s/it]Episode 810/1000, Avg Reward (last 10): -394308.83
+ 82%|████████▏ | 819/1000 [12:19:10<1:30:28, 29.99s/it]
+更新智能体 (Episode 820)...
+  J11: Actor Loss=0.0302, Critic Loss=0.8231
+  J3: Actor Loss=0.0111, Critic Loss=1.5504
+  J4: Actor Loss=-0.0180, Critic Loss=0.6320
+  J6: Actor Loss=-0.0920, Critic Loss=0.8357
+  J8: Actor Loss=-0.0572, Critic Loss=0.7152
+Episode 820/1000, Avg Reward (last 10): -324012.70
+ 83%|████████▎ | 830/1000 [12:24:45<1:26:33, 30.55s/it]Episode 830/1000, Avg Reward (last 10): -341712.79
+ 84%|████████▍ | 839/1000 [12:29:15<1:19:03, 29.46s/it]
+更新智能体 (Episode 840)...
+  J11: Actor Loss=0.0776, Critic Loss=1.3064
+  J3: Actor Loss=-0.2964, Critic Loss=1.9517
+  J4: Actor Loss=-0.0425, Critic Loss=0.7659
+  J6: Actor Loss=-0.0076, Critic Loss=0.7087
+  J8: Actor Loss=0.1182, Critic Loss=1.1952
+Episode 840/1000, Avg Reward (last 10): -414899.54
+ 85%|████████▌ | 850/1000 [12:34:45<1:14:40, 29.87s/it]Episode 850/1000, Avg Reward (last 10): -375404.26
+ 86%|████████▌ | 859/1000 [12:39:12<1:10:29, 29.99s/it]
+更新智能体 (Episode 860)...
+  J11: Actor Loss=-0.0210, Critic Loss=0.8016
+  J3: Actor Loss=0.0040, Critic Loss=1.0077
+  J4: Actor Loss=0.0078, Critic Loss=0.6407
+  J6: Actor Loss=0.0306, Critic Loss=0.6084
+  J8: Actor Loss=-0.0370, Critic Loss=0.9689
+Episode 860/1000, Avg Reward (last 10): -456997.81
+ 87%|████████▋ | 870/1000 [12:44:38<1:04:19, 29.69s/it]Episode 870/1000, Avg Reward (last 10): -434855.92
+ 88%|████████▊ | 879/1000 [12:49:10<1:02:02, 30.76s/it]
+更新智能体 (Episode 880)...
+  J11: Actor Loss=-0.0564, Critic Loss=0.7760
+  J3: Actor Loss=-0.0377, Critic Loss=1.1064
+  J4: Actor Loss=-0.0831, Critic Loss=0.6668
+  J6: Actor Loss=0.0470, Critic Loss=1.5956
+  J8: Actor Loss=-0.1687, Critic Loss=1.2638
+Episode 880/1000, Avg Reward (last 10): -454282.03
+ 89%|████████▉ | 890/1000 [12:54:40<55:27, 30.25s/it]Episode 890/1000, Avg Reward (last 10): -300348.23
+ 90%|████████▉ | 899/1000 [12:59:08<49:46, 29.57s/it]
+更新智能体 (Episode 900)...
+  J11: Actor Loss=0.0526, Critic Loss=0.9125
+  J3: Actor Loss=0.0144, Critic Loss=0.8852
+  J4: Actor Loss=-0.0042, Critic Loss=0.6803
+  J6: Actor Loss=-0.0917, Critic Loss=0.7314
+  J8: Actor Loss=0.0830, Critic Loss=0.9503
+Episode 900/1000, Avg Reward (last 10): -490242.24
+模型已保存到 models/mappo_episode_900
+ 91%|█████████ | 910/1000 [13:04:35<44:43, 29.82s/it]Episode 910/1000, Avg Reward (last 10): -393072.72
+ 92%|█████████▏| 919/1000 [13:09:04<39:58, 29.61s/it]
+更新智能体 (Episode 920)...
+  J11: Actor Loss=-0.1271, Critic Loss=0.7891
+  J3: Actor Loss=-0.0740, Critic Loss=0.9026
+  J4: Actor Loss=-0.1416, Critic Loss=1.1412
+  J6: Actor Loss=-0.0225, Critic Loss=0.8286
+  J8: Actor Loss=-0.1240, Critic Loss=1.0020
+Episode 920/1000, Avg Reward (last 10): -400410.77
+ 93%|█████████▎| 930/1000 [13:14:34<34:59, 29.99s/it]Episode 930/1000, Avg Reward (last 10): -431265.10
+ 94%|█████████▍| 939/1000 [13:19:02<30:17, 29.79s/it]
+更新智能体 (Episode 940)...
+  J11: Actor Loss=0.0299, Critic Loss=0.7106
+  J3: Actor Loss=0.0325, Critic Loss=0.8128
+  J4: Actor Loss=0.0056, Critic Loss=0.8620
+  J6: Actor Loss=-0.0723, Critic Loss=0.7432
+  J8: Actor Loss=0.0014, Critic Loss=1.0215
+Episode 940/1000, Avg Reward (last 10): -459426.92
+ 95%|█████████▌| 950/1000 [13:24:30<25:11, 30.24s/it]Episode 950/1000, Avg Reward (last 10): -310037.52
+ 96%|█████████▌| 959/1000 [13:28:58<20:23, 29.85s/it]
+更新智能体 (Episode 960)...
+  J11: Actor Loss=-0.0653, Critic Loss=0.7981
+  J3: Actor Loss=0.0181, Critic Loss=0.7837
+  J4: Actor Loss=0.0389, Critic Loss=0.7717
+  J6: Actor Loss=0.0753, Critic Loss=0.7535
+  J8: Actor Loss=-0.0556, Critic Loss=0.7915
+Episode 960/1000, Avg Reward (last 10): -266176.31
+ 97%|█████████▋| 970/1000 [13:34:30<15:02, 30.08s/it]Episode 970/1000, Avg Reward (last 10): -369720.76
+ 98%|█████████▊| 979/1000 [13:39:01<10:30, 30.02s/it]
+更新智能体 (Episode 980)...
+  J11: Actor Loss=0.0268, Critic Loss=0.7166
+  J3: Actor Loss=-0.0622, Critic Loss=0.6040
+  J4: Actor Loss=-0.0046, Critic Loss=0.6362
+  J6: Actor Loss=-0.1746, Critic Loss=0.7704
+ 98%|█████████▊| 980/1000 [13:39:31<10:00, 30.05s/it]  J8: Actor Loss=-0.0442, Critic Loss=0.6232
+Episode 980/1000, Avg Reward (last 10): -332902.57
+ 99%|█████████▉| 990/1000 [13:44:30<05:00, 30.04s/it]Episode 990/1000, Avg Reward (last 10): -378099.84
+100%|█████████▉| 999/1000 [13:49:03<00:30, 30.51s/it]
+更新智能体 (Episode 1000)...
+  J11: Actor Loss=-0.0715, Critic Loss=0.6628
+  J3: Actor Loss=-0.0583, Critic Loss=0.9983
+  J4: Actor Loss=-0.0173, Critic Loss=0.8956
+  J6: Actor Loss=0.0310, Critic Loss=0.9319
+  J8: Actor Loss=0.0051, Critic Loss=0.6771
+Episode 1000/1000, Avg Reward (last 10): -372342.11
+100%|██████████| 1000/1000 [13:49:32<00:00, 49.77s/it]
+模型已保存到 models/mappo_episode_1000
+
+训练完成！
+
+进程已结束，退出代码为 0
