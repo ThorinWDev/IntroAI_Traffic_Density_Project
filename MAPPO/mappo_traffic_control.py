@@ -122,7 +122,7 @@ class MAPPOAgent:
         returns = (returns - returns.mean()) / (returns.std() + 1e-7)
         
         # 全局状态
-        global_states_tensor = torch.FloatTensor(global_states).to(self.device)
+        global_states_tensor = torch.from_numpy(np.array(global_states)).float().to(self.device)
         
         # 优化K轮
         actor_losses = []
@@ -310,13 +310,12 @@ class SumoTrafficEnv:
 def train_mappo(env, agents, num_episodes=1000, update_interval=20):
     """训练MAPPO"""
     episode_rewards = []
-    
+    global_states_history = []
+
     for episode in tqdm(range(num_episodes)):
         states, global_state = env.reset()
         episode_reward = 0
         done = False
-
-        global_states_history = []
         
         while not done:
             actions = {}
@@ -357,6 +356,7 @@ def train_mappo(env, agents, num_episodes=1000, update_interval=20):
                 actor_loss, critic_loss = agent.update(global_states_history)
                 print(f"  {tl_id}: Actor Loss={actor_loss:.4f}, Critic Loss={critic_loss:.4f}")
                 agent.clear_memory()
+            global_states_history = []
         
         episode_rewards.append(episode_reward)
         
